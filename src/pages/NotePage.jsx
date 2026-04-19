@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import NavButton from "../components/NavButton";
 
 // ✏️ Replace this with your actual note for Ananya Keshav
-const NOTE_TEXT = `Dear Ananya Keshav,
+const NOTE_TEXT = `Dear Ananya ,
 
 Every great story has a character who makes it worth reading — you are that person in ours.
 
@@ -12,11 +12,11 @@ On this birthday, I want you to know that the world is genuinely better because 
 
 May this year bring you adventures worthy of your favourite stories, friendships that feel like home, and moments that make your heart glow.
 
-Happy Birthday, Ananya Keshav.
+Happy Birthday, Ananya.
 Here's to you — always. 🥂
 
 With love,
-[Your name] ⚡`;
+Gururaj ⚡`;
 
 const lines = NOTE_TEXT.split("\n");
 

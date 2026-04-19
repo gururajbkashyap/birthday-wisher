@@ -13,8 +13,8 @@ export default function PhotoPage({ onNext, onBack }) {
         alignItems: "center",
         justifyContent: "center",
         zIndex: 1,
-        gap: "20px",
-        padding: "24px",
+        gap: "clamp(10px, 2vh, 20px)",
+        padding: "clamp(14px, 3vh, 24px)",
       }}
     >
       <motion.p
@@ -43,7 +43,7 @@ export default function PhotoPage({ onNext, onBack }) {
           textAlign: "center",
         }}
       >
-        You & Me 🪄
+        Happy Birthday, my good friend! 🎂
       </motion.h2>
 
       <motion.div
@@ -79,7 +79,7 @@ export default function PhotoPage({ onNext, onBack }) {
           textAlign: "center",
         }}
       >
-        Every memory with you is its own kind of magic ✨
+        Wishing you all the magic in the world ✨
       </motion.p>
 
       <motion.div

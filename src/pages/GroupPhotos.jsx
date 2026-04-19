@@ -60,8 +60,24 @@ export default function GroupPhotos({ onNext, onBack }) {
             margin: 0,
           }}
         >
-          The People Who Make Her World Magical 🦉
+          Be Smiling Always ✨
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          style={{
+            fontFamily: "'IM Fell English', serif",
+            fontSize: "clamp(0.75rem, 1.8vw, 1rem)",
+            color: "rgba(212,175,55,0.65)",
+            fontStyle: "italic",
+            textAlign: "center",
+            margin: 0,
+          }}
+        >
+          ...just as you are in these pictures 📸
+        </motion.p>
       </div>
 
       {/* 2×2 photo grid — fills remaining space */}

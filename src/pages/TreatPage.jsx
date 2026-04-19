@@ -89,7 +89,7 @@ export default function TreatPage({ onRestart }) {
         className="bounce"
         style={{ fontSize: "clamp(4rem, 14vw, 7rem)", lineHeight: 1 }}
       >
-        🍺
+        🍽️
       </motion.div>
 
       <motion.h1
@@ -103,7 +103,7 @@ export default function TreatPage({ onRestart }) {
           lineHeight: 1.3,
         }}
       >
-        Butterbeer's on you! 🎉
+        The Feast is On You! 🎉
       </motion.h1>
 
       <motion.p
@@ -117,7 +117,7 @@ export default function TreatPage({ onRestart }) {
           textShadow: "0 0 10px rgba(174,0,1,0.6)",
         }}
       >
-        You owe me a Hogwarts feast, Ananya! ⚡
+        You owe me the best meal in town, Ananya! 🌟
       </motion.p>
 
       <motion.p
@@ -129,10 +129,10 @@ export default function TreatPage({ onRestart }) {
           color: "rgba(212,175,55,0.5)",
           fontSize: "clamp(0.85rem, 2vw, 1rem)",
           fontStyle: "italic",
-          maxWidth: "400px",
+          maxWidth: "440px",
         }}
       >
-        No treat, no peace. And I know where the Room of Requirement is. 🪄
+        A true foodie never dines alone — and I know exactly where we're going. 🍜🍰🌮
       </motion.p>
 
       <motion.div
