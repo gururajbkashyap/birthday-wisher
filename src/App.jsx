@@ -6,11 +6,11 @@ import PageBorder from "./components/PageBorder";
 import MusicPlayer from "./components/MusicPlayer";
 import WelcomePage from "./pages/WelcomePage";
 import PhotoPage from "./pages/PhotoPage";
-import GroupPhotos from "./pages/GroupPhotos";
+import ProphecyPage from "./pages/ProphecyPage";
 import NotePage from "./pages/NotePage";
 import TreatPage from "./pages/TreatPage";
 
-const PAGES = ["welcome", "photo", "group", "note", "treat"];
+const PAGES = ["welcome", "photo", "prophecy", "note", "treat"];
 
 const slideVariants = {
   enter: (dir) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
@@ -49,7 +49,7 @@ export default function App() {
         >
           {page === "welcome" && <WelcomePage onNext={() => go(1)} />}
           {page === "photo"   && <PhotoPage   onNext={() => go(1)} onBack={() => go(-1)} />}
-          {page === "group"   && <GroupPhotos onNext={() => go(1)} onBack={() => go(-1)} />}
+          {page === "prophecy" && <ProphecyPage onNext={() => go(1)} onBack={() => go(-1)} />}
           {page === "note"    && <NotePage    onNext={() => go(1)} onBack={() => go(-1)} />}
           {page === "treat"   && <TreatPage   onRestart={() => { setDir(-1); setPageIdx(0); }} />}
         </motion.div>

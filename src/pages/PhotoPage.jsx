@@ -39,7 +39,7 @@ export default function PhotoPage({ onNext, onBack }) {
         className="glow-gold"
         style={{
           fontFamily: "'Cinzel Decorative', cursive",
-          fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+          fontSize: "clamp(1rem, 3.5vw, 2rem)",
           textAlign: "center",
         }}
       >
@@ -48,21 +48,25 @@ export default function PhotoPage({ onNext, onBack }) {
 
       <motion.div
         initial={{ opacity: 0, scale: 0.6, rotate: -8 }}
-        animate={{ opacity: 1, scale: 1, rotate: -3 }}
+        animate={{ opacity: 1, scale: 1, rotate: -2 }}
         transition={{ duration: 0.8, type: "spring", bounce: 0.35, delay: 0.2 }}
-        className="polaroid"
         style={{
-          width: "min(300px, 78vw)",
-          height: "min(320px, 82vw)",
+          width: "min(460px, 88vw)",
+          borderRadius: "12px",
+          overflow: "hidden",
+          border: "2px solid rgba(212,175,55,0.55)",
+          boxShadow: "0 0 18px rgba(212,175,55,0.35), 0 0 48px rgba(212,175,55,0.15)",
+          lineHeight: 0,
         }}
       >
         <img
-          src="/photos/together.jpg"
+          src="/photos/together.jpeg"
           alt="Us together"
+          style={{ width: "100%", height: "auto", display: "block", borderRadius: "10px" }}
           onError={(e) => {
             e.currentTarget.style.display = "none";
             e.currentTarget.parentElement.innerHTML =
-              '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#d4af37;text-align:center;font-size:0.9rem;padding:16px;font-family:Cinzel,serif">📸 Drop your photo as<br/><code style="color:#f0d060">public/photos/together.jpg</code></div>';
+              '<div style="display:flex;align-items:center;justify-content:center;height:200px;color:#d4af37;text-align:center;font-size:0.9rem;padding:16px;font-family:Cinzel,serif">📸 together.jpeg</div>';
           }}
         />
       </motion.div>

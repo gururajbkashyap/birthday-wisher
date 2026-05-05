@@ -80,7 +80,7 @@ export default function GroupPhotos({ onNext, onBack }) {
         </motion.p>
       </div>
 
-      {/* 2×2 photo grid — fills remaining space */}
+      {/* 2×2 photo grid */}
       <div
         style={{
           display: "grid",
