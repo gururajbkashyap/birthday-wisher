@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import StarBackground from "./components/StarBackground";
 import FloatingCandles from "./components/FloatingCandles";
@@ -28,9 +28,22 @@ export default function App() {
   };
 
   const page = PAGES[pageIdx];
+  const touchStartX = useRef(null);
+
+  const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 50) go(delta > 0 ? 1 : -1);
+    touchStartX.current = null;
+  };
 
   return (
-    <div style={{ position: "fixed", inset: 0, background: "var(--bg)", overflow: "hidden" }}>
+    <div
+      style={{ position: "fixed", inset: 0, background: "var(--bg)", overflow: "hidden" }}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
       <StarBackground />
       <FloatingCandles />
       <PageBorder />

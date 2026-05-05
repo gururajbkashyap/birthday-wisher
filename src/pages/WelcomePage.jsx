@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+import confetti from "canvas-confetti";
 import NavButton from "../components/NavButton";
 
 const SHOOTING_STARS = [
@@ -8,7 +10,20 @@ const SHOOTING_STARS = [
   { top: "80%", left: "20%", delay: "0.8s" },
 ];
 
+function fireWelcomeConfetti() {
+  const colors = ["#d4af37", "#f0d060", "#ae0001", "#fff9e6", "#7b5ea7", "#ff6b6b"];
+  const burst = (opts) => confetti({ colors, origin: { y: 0.55 }, ...opts });
+  setTimeout(() => {
+    burst({ particleCount: 60, spread: 80, startVelocity: 55, angle: 60,  origin: { x: 0.1, y: 0.6 } });
+    burst({ particleCount: 60, spread: 80, startVelocity: 55, angle: 120, origin: { x: 0.9, y: 0.6 } });
+  }, 800);
+  setTimeout(() => {
+    burst({ particleCount: 80, spread: 120, startVelocity: 45, origin: { x: 0.5, y: 0.7 } });
+  }, 1400);
+}
+
 export default function WelcomePage({ onNext }) {
+  useEffect(() => { fireWelcomeConfetti(); }, []);
   return (
     <div
       style={{
@@ -84,14 +99,30 @@ export default function WelcomePage({ onNext }) {
         </motion.h2>
 
         <motion.p
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.3, duration: 0.6, type: "spring", bounce: 0.3 }}
+          style={{
+            fontFamily: "'Cinzel', serif",
+            fontSize: "clamp(0.95rem, 2.5vw, 1.4rem)",
+            letterSpacing: "3px",
+            color: "rgba(212,175,55,0.9)",
+            marginTop: "16px",
+            textShadow: "0 0 12px rgba(212,175,55,0.6)",
+          }}
+        >
+          ✦ You're turning 22 today! 🎂 ✦
+        </motion.p>
+
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.4, duration: 0.6 }}
+          transition={{ delay: 1.7, duration: 0.6 }}
           style={{
             fontFamily: "'IM Fell English', serif",
             color: "rgba(212,175,55,0.55)",
             fontSize: "clamp(0.9rem, 2vw, 1.15rem)",
-            marginTop: "20px",
+            marginTop: "16px",
             fontStyle: "italic",
             letterSpacing: "1px",
           }}

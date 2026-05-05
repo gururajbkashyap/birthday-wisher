@@ -103,7 +103,7 @@ export default function TreatPage({ onRestart }) {
           lineHeight: 1.3,
         }}
       >
-        The Feast is On You! 🎉
+        You Owe Me Curd Rice! 🎉
       </motion.h1>
 
       <motion.p
@@ -117,7 +117,7 @@ export default function TreatPage({ onRestart }) {
           textShadow: "0 0 10px rgba(174,0,1,0.6)",
         }}
       >
-        You owe me the best meal in town, Ananya! 🌟
+        It's your favourite & you know you owe me, Ananya! 🌟
       </motion.p>
 
       <motion.p
@@ -132,7 +132,7 @@ export default function TreatPage({ onRestart }) {
           maxWidth: "440px",
         }}
       >
-        A true foodie never dines alone — and I know exactly where we're going. 🍜🍰🌮
+        No curd rice, no peace. Birthday or not, a deal is a deal. 😤
       </motion.p>
 
       <motion.div
